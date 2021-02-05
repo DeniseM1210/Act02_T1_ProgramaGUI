@@ -12,7 +12,7 @@ class LayoutNulo extends JFrame{
 	public LayoutNulo() {
 		getContentPane().setLayout(new FlowLayout());
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setSize(800, 650);
+		setSize(800, 520);
 		setTitle("Prueba GUI");
 		setLocationRelativeTo(null);
 		setLayout(null);
@@ -57,6 +57,37 @@ class LayoutNulo extends JFrame{
 		JCheckBox check2 = new JCheckBox("interest group fields");
 		check2.setBounds(0, 240, 300, 20);
 		add(check2);
+		
+		JCheckBox check3 = new JCheckBox("required field indicators");
+		check3.setBounds(0, 260, 300, 20);
+		add(check3);
+		
+		JLabel txtTexto5 = new JLabel("Set form width");
+		txtTexto5.setFont(getFont());
+		txtTexto5.setBounds(0, 290, 300, 20);
+		add(txtTexto5);
+		
+		JTextField caja2 = new JTextField(10);
+		caja2.setBounds(0, 310, 300, 27);
+		add(caja2);
+		
+		JLabel txtTexto6 = new JLabel("Enhance your form");
+		txtTexto6.setFont(getFont());
+		txtTexto6.setBounds(0, 350, 300, 20);
+		add(txtTexto6);
+		
+		JCheckBox check4 = new JCheckBox("enable evil popup mode");
+		check4.setBounds(0, 370,300,20);
+		add(check4);
+		JCheckBox check5 = new JCheckBox("disable all JavaScript");
+		check5.setBounds(0, 395, 300, 20);
+		add(check5);
+		JCheckBox check6 = new JCheckBox("include archive link");
+		check6.setBounds(0, 420, 300, 20);
+		add(check6);
+		JCheckBox check7 = new JCheckBox("include MonkeyRewards link");
+		check7.setBounds(0, 445, 300, 20);
+		add(check7);
 		
 		setVisible(true);
 	}
