@@ -1,12 +1,18 @@
 import java.awt.*;
+import java.text.ParseException;
 
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JCheckBox;
+import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JRadioButton;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
+import javax.swing.text.MaskFormatter;
 
 class LayoutNulo extends JFrame{
 	public LayoutNulo() {
@@ -88,6 +94,61 @@ class LayoutNulo extends JFrame{
 		JCheckBox check7 = new JCheckBox("include MonkeyRewards link");
 		check7.setBounds(0, 445, 300, 20);
 		add(check7);
+		
+		JLabel txtTexto7 = new JLabel("Preview");
+		txtTexto7.setFont(getFont());
+		txtTexto7.setBounds(320, 0, 200, 20);
+		add(txtTexto7);
+		
+		JLabel txtTexto8 = new JLabel("Email Adress");
+		txtTexto8.setFont(getFont());
+		txtTexto8.setBounds(320, 30, 200, 20);
+		add(txtTexto8);
+		JFormattedTextField correo = new JFormattedTextField();
+		correo.setBounds(320, 47, 450, 27);
+		add(correo);
+		/*try {
+			correo = new JFormattedTextField(new MaskFormatter("******************@gmail.com"));
+			correo.setBounds(320, 47, 450, 27);
+			add(correo);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+		
+		JLabel txtTexto9 = new JLabel("First Name");
+		txtTexto9.setFont(getFont());
+		txtTexto9.setBounds(320, 80, 200, 20);
+		add(txtTexto9);
+		JTextField caja3 = new JTextField(10);
+		caja3.setBounds(320, 97, 450, 27);
+		add(caja3);
+		
+		JLabel txtTexto10 = new JLabel("Last Name");
+		txtTexto10.setFont(getFont());
+		txtTexto10.setBounds(320, 130, 200, 20);
+		add(txtTexto10);
+		JTextField caja4 = new JTextField(10);
+		caja4.setBounds(320, 147, 450, 27);
+		add(caja4);
+		
+		ImageIcon icono = new ImageIcon("src/img/icono.png");
+		
+		JButton btnSubscribe = new JButton();
+		btnSubscribe.setIcon(icono);
+		btnSubscribe.setBounds(320, 180, 160, 40);
+		add(btnSubscribe);
+		
+		JLabel txtTexto11 = new JLabel("Copy/ Paste onto your site");
+		txtTexto11.setFont(getFont());
+		txtTexto11.setBounds(320, 240, 200, 20);
+		add(txtTexto11);
+		
+		JTextArea area1 = new JTextArea();
+		area1.setLineWrap(true);
+		area1.setWrapStyleWord(true);
+		area1.setBounds(320, 260, 450, 150);
+		add(area1);
 		
 		setVisible(true);
 	}
